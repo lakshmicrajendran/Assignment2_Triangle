@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment2_SENG8040
+{
+   public static class TriangleSolver
+    {
+        public static string Analyze(int TS1, int TS2, int TS3)
+        {
+          
+            if ((TS1 == TS2 && TS2 == TS3))
+            {
+                return("This is an Equilateral Triangle");
+            }
+            else if (TS1 == TS2 || TS2 == TS3 || TS3 == TS1)
+            {
+                return("This is an Isosceles Triangle");
+            }
+            else
+            {
+                return("This is a Scalene Triangle");
+            }
+        }
+    }
+}
