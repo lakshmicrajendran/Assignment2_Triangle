@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+
+namespace Assignment2_SENG8040
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            string option = "";
+            bool Options = false;
+
+            while (Options == false)
+            {
+                Console.WriteLine("1 = Enter triangle dimensions");
+                Console.WriteLine("2 = Exit\n");
+
+                Console.WriteLine("Please enter a number for choosing an option");
+                option = Console.ReadLine();
+
+                if (option != "1" && option != "2")
+                {
+                    Console.WriteLine("Enter a valid option");
+                }
+                if(option == "2")
+                {
+                    Options = true;
+                    break;
+                }
+
+                Console.WriteLine("\n Please Enter Three Sides of a Triangle : ");
+                string side1, side2, side3;
+                int side1String, side2String, side3String;
+
+                do
+                {
+                    Console.WriteLine("Enter first side: ");
+                    side1 = Console.ReadLine();
+
+                } while (!(int.TryParse(side1, out side1String)));
+    
+                do
+                {
+                    Console.WriteLine("Enter second side: ");
+                    side2 = Console.ReadLine();
+
+                } while (!(int.TryParse(side2, out side2String)));
+
+                do
+                {
+                    Console.WriteLine("Enter third side: ");
+                    side3 = Console.ReadLine();
+
+                } while (!(int.TryParse(side3, out side3String)));
+
+                if ((side1String + side2String) > side3String && (side1String + side3String) > side2String && (side2String + side3String) > side1String)
+                    {
+                        Console.WriteLine("Triangle can be formed using side " + side1String + ", " + side2String + ", " + side3String);
+                        Console.WriteLine(TriangleSolver.Analyze(side1String, side2String, side3String));
+                    }
+                    else
+                        Console.WriteLine("Triangle cannot be formed using side " + side1String + ", " + side2String + ", " + side3String);
+            }
+        } 
+    }
+}
