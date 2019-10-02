@@ -1,0 +1,169 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Assignment2_SENG8040;
+using NUnit.Framework;
+
+
+namespace TriangleTest
+{
+    [TestFixture]
+    class Assignment2_SENG8040
+    {
+        [Test]
+        public void Analyze_FirstInput10_SecondInput10_ThirdInput10formsEquilateralTriangle()
+        {
+            //Arrange
+            int side1 = 10;
+            int side2 = 10;
+            int side3 = 10;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Equilateral Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput15_SecondInput15_ThirdInput20formsIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 15;
+            int side2 = 15;
+            int side3 = 20;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput25_SecondInput35_ThirdInput20formsScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 25;
+            int side2 = 35;
+            int side3 = 20;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is a Scalene Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput25_SecondInput35_ThirdInput35formsIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 25;
+            int side2 = 35;
+            int side3 = 35;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput11_SecondInput10_ThirdInput20formsScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 11;
+            int side2 = 10;
+            int side3 = 20;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is a Scalene Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput40_SecondInput40_ThirdInput40formsEquilateralTriangle()
+        {
+            //Arrange
+            int side1 = 40;
+            int side2 = 40;
+            int side3 = 40;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Equilateral Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput5_SecondInput3_ThirdInput6formsScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 5;
+            int side2 = 3;
+            int side3 = 6;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is a Scalene Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput100_SecondInput50_ThirdInput100formsIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 100;
+            int side2 = 50;
+            int side3 = 100;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+        [Test]
+        public void Analyze_FirstInput70_SecondInput70_ThirdInput70formsEquilateralTriangle()
+        {
+            //Arrange
+            int side1 = 70;
+            int side2 = 70;
+            int side3 = 70;
+            String Result = TriangleSolver.Analyze(side1, side2, side3);
+            String expectedOutput = Result;
+
+            //Act
+            String actualResult = "This is an Equilateral Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualResult);
+        }
+
+    }
+}
